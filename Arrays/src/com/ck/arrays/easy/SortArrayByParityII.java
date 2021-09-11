@@ -3,6 +3,7 @@ package com.ck.arrays.easy;
 import java.util.Arrays;
 
 // LC - 922 : Sort Array By Parity II
+// https://leetcode.com/problems/sort-array-by-parity-ii/
 public class SortArrayByParityII {
 
 	public static void main(String[] args) {
