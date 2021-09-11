@@ -13,20 +13,20 @@ public class MaxDepthBinaryTree {
 		TreeNode node3 = new TreeNode();
 		node3.val = 4;
 		TreeNode node4 = new TreeNode();
-		node3.val = 9;
+		node4.val = 9;
 		TreeNode node5 = new TreeNode();
-		node3.val = 10;
+		node5.val = 10;
 		TreeNode node6 = new TreeNode();
-		node3.val = 2;
+		node6.val = 2;
 		TreeNode node7 = new TreeNode();
-		node3.val = 6;
+		node7.val = 6;
 		TreeNode node8 = new TreeNode();
-		node3.val = 11;
+		node8.val = 11;
 		TreeNode node9 = new TreeNode();
-		node3.val = 12;
+		node9.val = 12;
 		TreeNode node10 = new TreeNode();
-		node3.val = 7;
-		
+		node10.val = 7;
+
 		root.left = node1;
 		root.right = node2;
 		node1.left = node3;
@@ -36,23 +36,22 @@ public class MaxDepthBinaryTree {
 		node3.right = node7;
 		node5.left = node8;
 		node6.right = node9;
-		node7.left = node10;		
-		
-		
-		System.out.println(maxDepth(root,0));
+		node7.left = node10;
+
+		System.out.println(maxDepth(root) - 1);
 	}
-	
-	public static int maxDepth(TreeNode node, int crnt) {
-		
-		if(node==null) return 0;
-		
-		crnt++;
-		if(node.left==null && node.right==null) {
-			return crnt;
-		}
-		int maxDepthLeft = maxDepth(node.left,crnt);
-		int maxDepthRight =  maxDepth(node.right,crnt);
-		return Math.max(maxDepthLeft, maxDepthRight);
+
+	public static int maxDepth(TreeNode node) {
+
+		if (node == null)
+			return 0;
+
+		/*
+		 * crnt++; if(node.left==null && node.right==null) { return crnt; } int
+		 * maxDepthLeft = maxDepth(node.left,crnt); int maxDepthRight =
+		 * maxDepth(node.right,crnt); return Math.max(maxDepthLeft, maxDepthRight);
+		 */
+		return 1 + Math.max(maxDepth(node.left), maxDepth(node.right));
 	}
 
 }

@@ -6,7 +6,7 @@ public class MedianOfTwoSortedArrays {
 
 	public static void main(String[] args) {
 		//System.out.println(findMedianSortedArraysI(new int[] { 3, 5, 7, 10, 15 }, new int[] { 2, 4, 12 }));
-		System.out.println(findMedianSortedArraysII(new int[] { 1,2,3 }, new int[] { 4,5,6 }));
+		System.out.println(findMedianSortedArraysII(new int[] { 1,2,3 }, new int[] { 4,5,6, 7 }));
 	}
 
 	// O(m+n) time + O(m+n) space
@@ -62,10 +62,10 @@ public class MedianOfTwoSortedArrays {
             aLeft = (aLow+aHigh)/2;
             bLeft = (totalE+1)/2 - aLeft;
             
-            aLeftM1E = (aLeft==0) ? Integer.MIN_VALUE : nums1[aLeft-1];
-            aLeftE = (aLeft==m)?Integer.MAX_VALUE : nums1[aLeft];
-            bLeftM1E = (bLeft==0)? Integer.MIN_VALUE : nums2[bLeft-1];
-            bLeftE = (bLeft==n)?Integer.MAX_VALUE : nums2[bLeft];
+            aLeftM1E = (aLeft==0) ? Integer.MIN_VALUE : nums1[aLeft-1]; // Last element of the left part of 1st array before partition line
+            aLeftE = (aLeft==m)?Integer.MAX_VALUE : nums1[aLeft];       // First element of the right part of 1st array after partition line
+            bLeftM1E = (bLeft==0)? Integer.MIN_VALUE : nums2[bLeft-1];  // Last element of left of 2nd array before partition line
+            bLeftE = (bLeft==n)?Integer.MAX_VALUE : nums2[bLeft];       // First element of the right part of 2nd array after partition line
             
             //Valid segregation
             if(aLeftM1E<=bLeftE && bLeftM1E<=aLeftE){

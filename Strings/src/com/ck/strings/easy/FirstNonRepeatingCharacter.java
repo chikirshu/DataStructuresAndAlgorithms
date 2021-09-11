@@ -7,7 +7,7 @@ import java.util.List;
 public class FirstNonRepeatingCharacter {
 
 	public static void main(String[] args) {
-		String str = "geeksforgeeksandgeeksquizfor";
+		String str = "geeksforgeeksandgeeksquizfor";// "aaaaa";
 		int res = findFirstNonRepeatingCharI(str);
 		if (res == -1)
 			System.out.println("No result found");

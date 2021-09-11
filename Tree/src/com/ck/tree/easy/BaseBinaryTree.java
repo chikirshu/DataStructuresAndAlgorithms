@@ -18,5 +18,9 @@ public interface BaseBinaryTree<T> {
 		System.out.print(root.val + " ");
 		displayInOrderTree(root.right);
 	}
+	
+	default void postOrderTraversalWithoutRecursion(BasicTreeNode root) {
+		
+	}
 
 }
