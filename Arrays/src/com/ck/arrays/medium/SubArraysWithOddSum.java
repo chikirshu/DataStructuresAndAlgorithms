@@ -5,7 +5,7 @@ package com.ck.arrays.medium;
 public class SubArraysWithOddSum {
 
 	public static void main(String[] args) {
-		System.out.println(numOfSubarraysI(new int[] { 1, 2, 3, 4, 5, 6, 7 }));
+		System.out.println(numOfSubarraysII(new int[] { 1, 2, 3, 4, 5, 6, 7 }));
 	}
 
 	// will give TLE
@@ -23,7 +23,7 @@ public class SubArraysWithOddSum {
 	}
 	
 	// https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/discuss/754743/JavaC%2B%2BPython-Prefix-Sum
-	public int numOfSubarraysII(int[] A) {
+	public static int numOfSubarraysII(int[] A) {
         int cur = 0, res = 0, count[] = {1, 0}, mod = (int)1e9 + 7;
         for (int a: A) {
             cur ^= a & 1;

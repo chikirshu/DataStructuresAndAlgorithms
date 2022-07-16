@@ -5,8 +5,8 @@ package com.ck.arrays.hard;
 public class MedianOfTwoSortedArrays {
 
 	public static void main(String[] args) {
-		//System.out.println(findMedianSortedArraysI(new int[] { 3, 5, 7, 10, 15 }, new int[] { 2, 4, 12 }));
-		System.out.println(findMedianSortedArraysII(new int[] { 1,2,3 }, new int[] { 4,5,6, 7 }));
+		System.out.println(findMedianSortedArraysI(new int[] { 3, 5, 7, 10, 15 }, new int[] { 2, 4, 12 }));
+		// System.out.println(findMedianSortedArraysII(new int[] { 1,2,3 }, new int[] { 4,5,6, 7 }));
 	}
 
 	// O(m+n) time + O(m+n) space
@@ -59,8 +59,8 @@ public class MedianOfTwoSortedArrays {
         
         while(aLow<=aHigh){
         	cnt++;
-            aLeft = (aLow+aHigh)/2;
-            bLeft = (totalE+1)/2 - aLeft;
+            aLeft = (aLow+aHigh)/2;                                     // Number of elements in left side from a
+            bLeft = (totalE+1)/2 - aLeft;                               // Number of elements in left side from b; totalE+1 because we want more elements in left side according to the formula we are going to apply
             
             aLeftM1E = (aLeft==0) ? Integer.MIN_VALUE : nums1[aLeft-1]; // Last element of the left part of 1st array before partition line
             aLeftE = (aLeft==m)?Integer.MAX_VALUE : nums1[aLeft];       // First element of the right part of 1st array after partition line

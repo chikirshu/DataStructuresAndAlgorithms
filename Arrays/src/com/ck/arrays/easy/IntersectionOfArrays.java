@@ -11,7 +11,7 @@ public class IntersectionOfArrays {
 
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(intersectionI(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 })));
-		System.out.println(Arrays.toString(intersectionII(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 })));
+		System.out.println(Arrays.toString(intersectionII(new int[] { 4,44,4,4,4,4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 })));
 		// refer the thread for more better solutions
 		// https://leetcode.com/problems/intersection-of-two-arrays/discuss/81969/Three-Java-Solutions
 	}
@@ -42,6 +42,7 @@ public class IntersectionOfArrays {
 		Arrays.sort(nums2);
 
 		String s = "";
+		System.out.println("Length of s is : " + s.length());
 
 		int i = 0, j = 0, len1 = nums1.length, len2 = nums2.length, k = 0;
 		while (i < len1 && j < len2) {
@@ -50,7 +51,8 @@ public class IntersectionOfArrays {
 			} else if (nums1[i] > nums2[j]) {
 				j++;
 			} else {
-				s += String.valueOf(nums1[i]);
+				 if(s.equals("") || (s.length()>=1 && !String.valueOf(nums1[i]).equals(s.substring(s.length()-1))))
+					s += String.valueOf(nums1[i]);
 				i++;
 				j++;
 			}

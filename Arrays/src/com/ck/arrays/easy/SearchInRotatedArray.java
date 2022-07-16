@@ -1,5 +1,9 @@
 package com.ck.arrays.easy;
 
+// Good question - need practice
+// what if elements in the input array are not distinct?
+// should actually be a part of searching and sorting series
+//last update - 12/06/2022 - will check later
 // GFG - Search in Rotated Array
 // https://practice.geeksforgeeks.org/problems/search-in-a-rotated-array4618/1#
 public class SearchInRotatedArray {

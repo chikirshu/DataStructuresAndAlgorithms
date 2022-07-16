@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class ReverseString {
 
 	public static void main(String[] args) {
-		char[] s = new char[] { 'H', 'a', 'n', 'n', 'a', 'h' };
+		char[] s = new char[] { 'H', 'a', 't', 'n', 'a', 'h' };
 		reverseString(s);
 		System.out.println(Arrays.toString(s));
 	}

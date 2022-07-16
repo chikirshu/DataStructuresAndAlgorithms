@@ -20,5 +20,21 @@ public class SubArraysAvgGreaterThanThreshold {
 		}
 		return sum / k >= threshold ? res + 1 : res;
 	}
+	
+	// Similar approach written on 19/06/2022
+	 public static int numOfSubarraysII(int[] arr, int k, int threshold) {
+	        
+	        int start=0, res=0, sum=0;
+	        for(int i=0;i<arr.length;i++){
+	            sum+=arr[i];
+	            if(i-start==k-1){
+	                if(sum/k>=threshold) res++;
+	                sum=sum-arr[start];
+	                start++;
+	            }
+	        }
+	        return res;
+	        
+	    }
 
 }

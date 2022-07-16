@@ -3,6 +3,7 @@ package com.ck.arrays.easy;
 import java.util.HashMap;
 import java.util.Map;
 
+// last update : 12/06/2022 - will check later
 public class NumberOfGoodPairs {
 
 	public static void main(String[] args) {

@@ -8,10 +8,10 @@ public class PalindromeLinkedList {
 		l.insertNodeAtEnd(1);
 		l.insertNodeAtEnd(2);
 		l.insertNodeAtEnd(3);
-		l.insertNodeAtEnd(4);
-		l.insertNodeAtEnd(5);
+		l.insertNodeAtEnd(2);
+		l.insertNodeAtEnd(1);
 		//l.display();
-		//System.out.println(p.isPalindrome(l.getHead()));
+		System.out.println(p.isPalindrome(l.getHead()));
 		ListNode head =  p.swapNodes(l.getHead(),2);
 		l.display();
 		

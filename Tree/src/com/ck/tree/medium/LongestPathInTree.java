@@ -21,8 +21,8 @@ public class LongestPathInTree {
 		node2.val = 2;
 		TreeNode node7 = new TreeNode();
 		node3.val = 6;
-		TreeNode node4 = new TreeNode();
-		node4.val = 4;
+		TreeNode node8 = new TreeNode();
+		node8.val = 4;
 		
 		root.left = node1;
 		root.right = node2;

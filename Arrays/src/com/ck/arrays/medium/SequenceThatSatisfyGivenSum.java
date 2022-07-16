@@ -21,7 +21,7 @@ public class SequenceThatSatisfyGivenSum {
             for(int j=0;j<n;j++){
                 if(BigInteger.valueOf(i).testBit(j)){
                     if(start==-1)start=j;
-                    if(end==-1 || nums[j]>=nums[end]) end=j; // I feel this condition can be skiped
+                    if(end==-1 || nums[j]>=nums[end]) end=j; // I feel this condition can be skiped - Edit : 19/06/2022 - Required as needed when start and end are not equal and array is in sorted fashion
                     
                 }
             }

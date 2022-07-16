@@ -4,6 +4,7 @@ public class ReverseWordsInString {
 
 	public static void main(String[] args) {
 		System.out.println(reverseWords("  Bob    Loves  Alice   "));
+		System.out.println(reverseWordsII("  Bob    Loves  Alice   "));
 	}
 
 	public static String reverseWords(String s) {
@@ -21,6 +22,20 @@ public class ReverseWordsInString {
 				continue;
 			}
 			res += s2 + " ";
+		}
+		return res.trim();
+	}
+	
+	// Edited on - 19/06/2022
+	public static String reverseWordsII(String s) {
+		if(s==null || s=="") {
+			return null;
+		}
+		String[] str = s.trim().split("\\s+");
+		String res="";
+		int n=str.length;
+		for(int i=n-1;i>=0;i--) {
+			res+=str[i]+" ";
 		}
 		return res.trim();
 	}

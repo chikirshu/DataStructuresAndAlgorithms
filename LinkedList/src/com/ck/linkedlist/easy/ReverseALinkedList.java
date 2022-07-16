@@ -4,6 +4,8 @@ import com.ck.linkedlist.common.ListNode;
 
 // G2G - Reverse a linked list 
 // https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1#
+// LC - 206 : Reverse Linked List
+// https://leetcode.com/problems/reverse-linked-list/
 public class ReverseALinkedList {
 
 	public static void main(String[] args) {

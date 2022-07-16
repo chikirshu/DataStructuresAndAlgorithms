@@ -6,7 +6,8 @@ public class LongestRepeatingCharReplacement {
 
 	public static void main(String[] args) {
 		// System.out.println(characterReplacementI("ABBB",1));//wrong
-		System.out.println(characterReplacementII("ABBB", 1));// right
+		System.out.println(characterReplacementII("AABABBA", 1));// right
+		System.out.println(characterReplacementIII("AABABBA", 1)); // also right but takes lot of time
 	}
 
 	public static int characterReplacementII(String s, int k) {
@@ -14,8 +15,9 @@ public class LongestRepeatingCharReplacement {
 		int[] charArr = new int[26];
 		for (end = 0; end < s.length(); end++) {
 			maxCharCnt = (int) Math.max(maxCharCnt, ++charArr[s.charAt(end) - 'A']);
-			// length of the window  - maxCharCnt > k  -> meaning you will exhaust all your k, therefore slide your window and decrement the entry.
-			// entries in your char array should represent only the chars in your window  
+			// length of the window - maxCharCnt > k -> meaning you will exhaust all your k,
+			// therefore slide your window and decrement the entry.
+			// entries in your char array should represent only the chars in your window
 			if (end - start + 1 - maxCharCnt > k) {
 				charArr[s.charAt(start) - 'A']--;
 				start++;
@@ -49,6 +51,40 @@ public class LongestRepeatingCharReplacement {
 			}
 		}
 		return k >= 0 ? (int) Math.max(max, i - start) : max;
+	}
+
+	// doing extra steps which is not needed it seems
+	public static int characterReplacementIII(String s, int k) {
+		int start = 0, end = 0, oMax = 1, maxRepeatChar = 0;
+		int[] arr = new int[26];
+		arr[s.charAt(start) - 'A']++;
+
+		for (int i = 1; i < s.length(); i++) {
+			arr[s.charAt(i) - 'A']++;
+			maxRepeatChar = findMaxRepeatChar(arr); // According to approach 2nd there is no need to check for max in
+													// whole array, just compare the current entry with max entry
+			if (i - start + 1 - maxRepeatChar <= k) {
+
+			} else {
+				oMax = Math.max(oMax, end - start + 1);
+
+				while (i - start + 1 - maxRepeatChar > k) {
+					arr[s.charAt(start) - 'A']--;
+					start++;
+					maxRepeatChar = findMaxRepeatChar(arr);
+				}
+			}
+			end = i;
+		}
+		return Math.max(oMax, end - start + 1);
+	}
+
+	public static int findMaxRepeatChar(int[] arr) {
+		int max = 0;
+		for (int i = 0; i < arr.length; i++) {
+			max = Math.max(max, arr[i]);
+		}
+		return max;
 	}
 
 }

@@ -5,7 +5,9 @@ import java.util.Arrays;
 import com.ck.linkedlist.common.ListNode;
 
 // GFG - Sort linked list of 0s, 1s, 2s
+// GFG - Sort an array of 0s, 1s and 2s
 // https://www.geeksforgeeks.org/sort-a-linked-list-of-0s-1s-or-2s/
+// https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1#
 public class Segregate_0_1_2 {
 
 	public static void main(String[] args) {
@@ -73,7 +75,7 @@ public class Segregate_0_1_2 {
 		int low = 0, mid = 0, high = arr.length - 1, temp = 0;
 		// low represents start of 1s, mid represents unknown region and high represents
 		// 2s.
-		while (mid != high) {
+		while (mid <= high) {
 			// if arr[mid]=0 swap arr[low] and arr[mid] and do low++, mid++
 			// if arr[mid]=1 do mid++;
 			// if arr[mid]=2 swap arr[mid] and arr[high] and do high--

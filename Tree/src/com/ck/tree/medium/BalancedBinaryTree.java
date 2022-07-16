@@ -20,9 +20,9 @@ public class BalancedBinaryTree {
 		node4.val = 50;
 
 		root.left = node1;
-		root.right = node2;
-		node1.left = node3;
-		node1.right = node4;
+		//root.right = node2;
+		//node1.left = node3;
+		//node1.right = node4;
 		System.out.println(isBalanced(root));
 	}
 

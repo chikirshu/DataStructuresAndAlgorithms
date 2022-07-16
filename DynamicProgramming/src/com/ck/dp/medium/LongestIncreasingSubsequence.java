@@ -2,6 +2,8 @@ package com.ck.dp.medium;
 
 import java.util.Arrays;
 
+// LC - 300 : Longest Increasing Subsequence
+// https://leetcode.com/problems/longest-increasing-subsequence/submissions/
 // https://www.youtube.com/watch?v=odrfUCS9sQk
 public class LongestIncreasingSubsequence {
 
