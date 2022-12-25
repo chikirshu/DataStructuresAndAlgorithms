@@ -7,7 +7,8 @@ import java.util.Map;
 public class LengthOfLongestSubstring {
 
 	public static void main(String[] args) {
-		String s = "abcabcbb";
+		//String s = "abcabcbb";
+		String s="abbac";
 		System.out.println(lengthOfLongestSubstring(s));
 	}
 

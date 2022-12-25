@@ -23,6 +23,8 @@ public class AllSeqOfString {
 			}
 			res.add(crnt);
 		}
+		System.out.println(BigInteger.valueOf(4).testBit(0));
+		System.out.println(BigInteger.valueOf(4).testBit(1));
 		return res;
 	}
 
