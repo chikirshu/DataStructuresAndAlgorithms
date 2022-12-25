@@ -6,7 +6,7 @@ public class test {
 		// System.out.println(solution(966));
 		// System.out.println(solutionII(new int[] {1,1,0,1,1}));
 		// System.out.println(solutionIII(new int[] {1,1,0,1,1}));
-		// System.out.println(solutionII(new int[] {1,1,1,1,1}));
+		// System.out.println(solutionII(new int[] {1,1,1,1,1})); 
 		System.out.println(solutionIV(new int[] {0,1,1,1,0}));
 
 	}
