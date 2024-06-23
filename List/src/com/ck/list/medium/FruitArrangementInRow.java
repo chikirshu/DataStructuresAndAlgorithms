@@ -6,7 +6,7 @@ import java.util.List;
 public class FruitArrangementInRow {
 
 	public static void main(String[] args) {
-		int[] arr = new int[] {5,4,3}; // 2 Apples, 3 Mangoes, 1 Bananas
+		int[] arr = new int[] {5,4,3}; // Mango, Orange, Apple
 		fruitArrangement(arr, new ArrayList<>());
 	}
 
