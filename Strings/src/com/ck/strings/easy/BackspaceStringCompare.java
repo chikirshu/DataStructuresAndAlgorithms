@@ -13,7 +13,8 @@ public class BackspaceStringCompare {
         
         StringBuilder sb = new StringBuilder();
         StringBuilder tb = new StringBuilder();
-        
+
+
         while(i<s.length() || j<t.length()){
             if(i<s.length()){
                 if(s.charAt(i)=='#'){
