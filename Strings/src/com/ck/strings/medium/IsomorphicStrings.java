@@ -8,7 +8,7 @@ import java.util.Map;
 public class IsomorphicStrings {
 
 	public static void main(String[] args) {
-		System.out.println(isIsomorphicI("badc","baba"));
+		System.out.println(isIsomorphicI("app","bnn"));
 	}
 	
 	public static boolean isIsomorphicI(String s, String t) {
