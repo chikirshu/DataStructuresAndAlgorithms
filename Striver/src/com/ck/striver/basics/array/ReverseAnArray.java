@@ -16,6 +16,9 @@ public class ReverseAnArray {
         }
     }
 
+    // Note this technique will not work if you have to reverse a sub arrray. Its better to traverse from start to end
+    // Can also use two pointer approach start and end; do start++ and end--.
+    // Two pointer approach is better because if asked to reverse a part of string then below approach will not give correct solution
     private static void reverseAnArray(int[] nums, int n){
         for(int i=0;i<n/2;i++){
             int temp = nums[i];

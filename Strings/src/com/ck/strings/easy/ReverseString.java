@@ -12,6 +12,8 @@ public class ReverseString {
 		System.out.println(Arrays.toString(s));
 	}
 
+	// Can also use two pointer approach start and end; do start++ and end--.
+	// Two pointer approach is better because if asked to reverse a part of string then below approach will not give correct solution
 	public static void reverseString(char[] s) {
 
 		for (int i = 0; i < s.length / 2; i++) {

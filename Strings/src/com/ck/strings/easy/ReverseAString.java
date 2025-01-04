@@ -8,6 +8,8 @@ public class ReverseAString {
 		System.out.println(reverseWord("Geeks"));
 	}
 
+	// Can also use two pointer approach start and end; do start++ and end--.
+	// Two pointer approach is better because if asked to reverse a part of string then below approach will not give correct solution
 	public static String reverseWord(String str) {
 		// Reverse the string str
 		int n = str.length();
